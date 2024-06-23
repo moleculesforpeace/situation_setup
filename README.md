@@ -1,9 +1,12 @@
-# tf_aws_cspm_security_role
+# Situation Setup
 
-Terraform module which creates a AWS IAM Role used by Cloud Security Posture Management agents.
+This repository provides a set of modules and utilities to help you setup Situation data sources.
 
-## Usage
+## Data Sources
+
+### AWS
 
 ```bash
-terraform apply -var aws_principal="..."
+cd aws/tf_aws_situation_authorization
+cat README.md
 ```
