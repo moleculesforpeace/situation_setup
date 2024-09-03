@@ -9,7 +9,7 @@ resource "aws_iam_policy" "assume_role_on_other_accounts_from_org" {
         "Sid"      = "AssumeRole"
         "Effect"   = "Allow"
         "Action"   = "sts:AssumeRole"
-        "Resource" = "arn:aws:iam::*:role/OrganizationAccountAccessRole"
+        "Resource" = "arn:aws:iam::*:role/${var.organization_trusting_iam_role_name}"
         "Condition" = {
           "StringEquals" = {
             "aws:ResourceOrgID" = "$${aws:PrincipalOrgID}"
